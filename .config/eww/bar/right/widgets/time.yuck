@@ -1,0 +1,24 @@
+(defvar timeClicked false)
+
+(defwidget time[]
+  (box
+    (button
+      :onclick "eww update timeClicked=true"
+      :visible { timeClicked ? false : true }
+      ;:style "margin: 0px 4px 0px 0px"
+      (label
+        :class "text"
+        :text "${formattime(EWW_TIME, "%I:%M %p", "EST")}"
+      )
+    )
+    (button
+      :onclick "eww update timeClicked=false"
+      :visible timeClicked
+      ;:style "margin: 0px 4px 0px 0px"
+      (label
+        :class "text"
+        :text "${formattime(EWW_TIME, "%D", "EST")}"
+      )
+    )
+  )
+)

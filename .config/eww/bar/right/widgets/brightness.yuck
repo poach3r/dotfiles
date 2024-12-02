@@ -1,0 +1,43 @@
+(defvar brightnessClicked false)
+
+(defwidget brightness []
+  (overlay
+    (scale
+      :value brightness
+      :width 220
+      :min 0
+      :max 255
+      :onchange "brightnessctl s {}"
+    )
+    (label
+      :style "margin: 0px 0px 0px 12px; color: #26233a;"
+      :halign "start"
+      :class "text"
+      :text "${ brightness >= 127 ? "󰃠" : "󰃛" }"
+    )
+  )
+)
+
+(defwidget brightnessIcon []
+  (box
+    :style "margin: 0px 3px 0px 4px;"  
+    (button
+      :onclick "eww update brightnessClicked=true"
+      :visible { brightnessClicked ? false : true }
+      (image
+        :fill-svg "#FFFFFF"
+        :image-width 24
+        :image-height 24
+        :path "${ brightness >= 127 ? "./images/brightness_high.svg" : "./images/brightness_low.svg" }"
+      )
+    )
+    (button
+      :onclick "eww update brightnessClicked=false"
+      :visible brightnessClicked
+      (label
+        :text "${brightness}"
+        :class "textNoBg"
+      )
+    )
+  )
+)

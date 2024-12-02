@@ -1,0 +1,32 @@
+(include "./bar/right/widgets/battery.yuck")
+(include "./bar/right/widgets/volume.yuck")
+(include "./bar/right/widgets/brightness.yuck")
+;(include "./bar/right/widgets/wifi.yuck")
+(include "./bar/right/widgets/time.yuck")
+(include "./bar/right/widgets/controlPanelLauncher.yuck")
+
+(defvar controlPanelPressed false)
+
+(defwidget right []
+  (box
+    :space-evenly false
+    :orientation "h"
+    :halign "end"
+    (box
+      :space-evenly false
+      :orientation "h"
+      :class "icon"
+      ;:style "margin: 0px 6px 0px 0px; padding: 0px 4px 0px 0px; background-color: #262626; border-radius: 6px;"
+      (systray
+        :spacing 4
+      ) 
+      (battery)
+      (volumeIcon)
+      (brightnessIcon)
+      ;(wifiIcon)
+    )
+    (time)
+    (controlPanelLauncher)
+  )
+)
+

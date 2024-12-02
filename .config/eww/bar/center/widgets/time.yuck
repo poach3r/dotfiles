@@ -1,0 +1,26 @@
+(defvar timePressed false)
+
+;(defwidget time []
+;    (button
+;      :timeout "1000m"
+;      :onclick { timePressed ? 'eww update timePressed=false -c ./; eww close timeW -c ./' : 
+;                               'eww update timePressed=true -c ./; eww open timeW -c ./' } 
+;      (label
+;        :text { timePressed ? "" : "${formattime(EWW_TIME, "%I:%M %p", "EST")}" }
+;        :class "text"
+;        :style { timePressed ? "color: #ee5396; font-size: 24;" : "font-size: 24; color: #E4E5E7" }
+;      )
+;    )
+;)
+
+(defwidget time []
+  (box
+    :orientation "h"
+    :space-evenly false
+    :style "margin: 4px;"
+    (label
+      :text "${formattime(EWW_TIME, "%I:%M %p", "EST")}"
+      :class "text"
+    )
+  )
+)

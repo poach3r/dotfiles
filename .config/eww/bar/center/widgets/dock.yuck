@@ -1,0 +1,13 @@
+(defwidget dock []
+  (box
+    :space-evenly false
+    (for app in appsjson
+      (image
+        :class "app"
+        :path "${app}"
+        :image-height 34
+        :image-width 34
+      )
+    )
+  )
+)

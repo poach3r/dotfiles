@@ -1,0 +1,34 @@
+super + shift + Escape
+	pkill -KILL -u $USER
+super + Return
+	alacritty
+super + r
+	rofi -show drun -theme ~/.config/rofi/config.rasi -icon-theme "Papirus-Dark" -show-icons
+super + q
+	bspc node -c
+super + {1-4}
+	WORKSPACE={1-4}; bspc desktop -f $WORKSPACE; eww update activeWorkspace=$WORKSPACE;
+super + shift + {1-4}
+	WORKSPACE={1-4}; bspc node -d $WORKSPACE; eww update activeWorkspace=$WORKSPACE;
+super + f
+	bspc desktop -l next
+super + space
+	bspc node focused -t floating
+super + shift + space
+	bspc node focused -t tiled
+super + {a, d}
+	bspc node -f {next.local, prev.local}
+F1
+	if [[ $(pamixer --get-mute) == \"false\" ]] then pamixer -m; else pamixer -u; fi
+F2
+	pamixer -d 5
+F3
+	pamixer -i 5
+F5
+	brightnessctl set 5%-
+F6
+	brightnessctl set +5%
+Print
+	shotgun -g $(hacksaw) - | xclip -t "image/png" -selection clipboard; notify-send "Screenshot" "Successfully captured area."
+super + Print
+	shotgun -s - | xclip -t "image/png" -selection clipboard; notify-send "Screenshot" "Successfully captured screen."

@@ -1,0 +1,12 @@
+(defwidget launcher[]  
+  (button
+    :onclick "rofi -show drun -theme ~/.config/rofi/config.rasi -icon-theme \"Papirus-Dark\" &"
+    :class "icon"
+    (image
+      :path "./images/apps.svg"
+      :fill-svg "#FFFFFF"
+      :image-width 24
+      :image-height 24
+    )
+  )
+)

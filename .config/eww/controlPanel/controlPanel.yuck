@@ -1,0 +1,38 @@
+(include "./controlPanel/widgets/wifi.yuck")
+(include "./controlPanel/widgets/brightness.yuck")
+(include "./controlPanel/widgets/dnd.yuck")
+(include "./controlPanel/widgets/capsLock.yuck")
+(include "./controlPanel/widgets/bluetooth.yuck")
+(include "./controlPanel/widgets/volume.yuck")
+
+(defwidget controlPanelW []
+    (box
+      :class "container"
+      :orientation "v"
+      :space-evenly false
+      :style "padding: 6px; border-radius: 16px;"
+      (box
+        :halign "center"
+        :space-evenly false
+        :orientation "h"
+        (box 
+          :space-evenly false
+          :orientation "v"
+          (wifi)  
+          (dnd)
+        )
+        (box
+          :space-evenly false
+          :orientation "v"
+          (bluetooth)
+          (capsLock)
+        )
+      )
+      (box
+        :style "margin: 4px 0px;"
+      )
+      (brightness)
+      (volumeScale)
+      (micVolumeScale)
+    ) 
+  )

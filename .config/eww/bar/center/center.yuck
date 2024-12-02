@@ -1,0 +1,11 @@
+(include "./bar/center/widgets/time.yuck")
+(include "./bar/center/widgets/dock.yuck")
+
+(defwidget center []
+  (box
+    :halign "center"
+    :space-evenly "true"
+    :orientation "h"
+    (dock)
+  )
+)

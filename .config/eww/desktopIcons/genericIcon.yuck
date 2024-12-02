@@ -1,0 +1,15 @@
+(defwidget genericIcon [ onclick name altName ]
+  (eventbox
+    :onclick "${onclick} &"
+    (box
+      :orientation "v"
+      :space-evenly false
+      (image
+        :class "desktopIcon"
+        :image-width 48
+        :image-height 48
+        :path "/usr/share/icons/Papirus-Dark/48x48/apps/${name}.svg"
+      )
+     )
+  )
+)

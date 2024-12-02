@@ -1,0 +1,21 @@
+(defwidget brightness []
+  (box
+    :space-evenly false
+    :class "test"
+    (image
+      :halign "start"
+      :path "${ brightness >= 127 ? "./images/brightness_high.svg" : "./images/brightness_low.svg" }"
+      :image-width 20
+      :image-height 20
+      :fill-svg "#FFFFFF"
+      :style "margin: 0px 6px 0px 0px;"   
+    )
+    (scale
+      :value brightness
+      :width 180
+      :min 0
+      :max 255
+      :onchange "brightnessctl s {}"
+    )
+  )
+)

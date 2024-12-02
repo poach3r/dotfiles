@@ -1,0 +1,7 @@
+(defwidget launcher[]
+  (label
+    :text "b"
+    ;:class "icon"
+    ;:style "margin: 20px 20px 20px 20px;"
+  )
+)

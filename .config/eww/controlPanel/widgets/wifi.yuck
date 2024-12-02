@@ -1,0 +1,9 @@
+(defwidget wifi []
+  (image
+    :path "${wifiName != "" ? "./images/wifi_on.svg" : "./images/wifi_off.svg"}"
+    :image-width 24
+    :image-height 24
+    :fill-svg "#FFFFFF"
+    :class { wifiName != "" ? "on" : "off" }
+  )
+)

@@ -1,0 +1,12 @@
+(include "./bar/left/widgets/workspaces.yuck")
+(include "./bar/left/widgets/launcher.yuck")
+
+(defwidget left []
+  (box
+    :halign "start"
+    :space-evenly "false"
+    :orientation "h"
+    (launcher)
+    (workspaces)
+  )
+)

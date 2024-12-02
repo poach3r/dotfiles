@@ -1,0 +1,24 @@
+(defvar activeWorkspace 1)
+
+(defwidget workspaces []
+  (box
+    :class "icon"
+    :space-evenly false
+    (workspaceNub :num 1)
+    (workspaceNub :num 2)
+    (workspaceNub :num 3)
+    (workspaceNub :num 4)
+  )
+)
+
+(defwidget workspaceNub [ num ]
+  (eventbox
+    :onclick "bspc desktop -f ${num}; eww update activeWorkspace=${num} -c ./"
+    :cursor "pointer"
+    (label
+      :text num
+      :class "workspaceThing"
+      :style { activeWorkspace == num ? "color: #161616; background-color: #f2f4f8; border-radius: 8px;" : ""}
+    )
+  )
+)

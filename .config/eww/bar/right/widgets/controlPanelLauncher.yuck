@@ -1,0 +1,14 @@
+(defvar controlPanelVisible false)
+
+(defwidget controlPanelLauncher[]  
+  (button
+    :onclick { controlPanelVisible ? "eww close controlPanel -c ./; eww update controlPanelVisible=false -c ./" : "eww open controlPanel -c ./; eww update controlPanelVisible=true -c ./ &" }
+    :class "icon"
+    (image
+      :path { controlPanelVisible ? "./images/close.svg" : "./images/menu.svg" }
+      :fill-svg "#FFFFFF"
+      :image-width 24
+      :image-height 24
+    )
+  )
+)

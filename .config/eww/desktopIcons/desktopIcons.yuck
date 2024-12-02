@@ -1,0 +1,13 @@
+(include "./desktopIcons/genericIcon.yuck")
+
+(defwidget desktopIconsW []
+  (box
+    :orientation "v"
+    :space-evenly false
+    :style "margin: 4px;"
+    (genericIcon :onclick "firefox" :name "firefox" :altName "Firefox")
+    (genericIcon :onclick "idea-ultimate" :name "intellij-idea" :altName "Idea")
+    (genericIcon :onclick "alacritty" :name "terminal" :altName "Alacritty")
+    (genericIcon :onclick "nemo" :name "system-file-manager" :altName "Nemo")
+  )
+)

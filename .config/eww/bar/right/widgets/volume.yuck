@@ -1,0 +1,23 @@
+(defvar volumeClicked false)
+
+(defwidget volumeIcon []
+  (box
+    (button
+      :onclick "eww update volumeClicked=true"
+      :visible { volumeClicked ? false : true }
+      (image
+        :path "${ headphonesVolume > 0 ? "./images/volume_up.svg" : "./images/volume_off.svg"}"
+        :fill-svg "#FFFFFF"
+        :image-width 24
+        :image-height 24
+      )
+    )
+    (button
+      :class "textNoBg"
+      :style "margin: 0px 4px;"
+      :onclick "eww update volumeClicked=false"
+      :visible volumeClicked
+      "${headphonesVolume}%"
+    )
+  )
+)

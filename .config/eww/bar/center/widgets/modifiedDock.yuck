@@ -1,0 +1,14 @@
+(deflisten appsjson
+  "./scripts/apps.sh"
+)
+
+(defwidget dock []
+  (box
+    :space-evenly false
+    (for app in appsjson
+      (label
+        :text " ${app} "
+      )
+    )
+  )
+)

@@ -1,0 +1,10 @@
+import = [ "~/.config/alacritty/oxocarbon.toml" ]
+
+[window.padding]
+x = 6
+y = 6
+
+[font]
+size = 7.0
+[font.normal]
+family = "JetBrainsMono Nerd Font"

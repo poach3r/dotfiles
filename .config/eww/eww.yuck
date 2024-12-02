@@ -1,0 +1,63 @@
+(include "./bar/center/center.yuck")
+(include "./bar/left/left.yuck")
+(include "./bar/right/right.yuck")
+(include "./scripts/scripts.yuck")
+(include "./notifications/notifications.yuck")
+(include "./desktopIcons/desktopIcons.yuck")
+(include "./controlPanel/controlPanel.yuck")
+
+(defwindow bar
+  :monitor 0
+  :geometry (geometry  
+    :x 0
+    :y 0
+    :width "100%"
+    :anchor "bottom center")
+  :stacking "fg"
+  :wm-ignore false
+  :windowtype "dock"
+  :reserve (struts :distance "46px" :side "bottom")
+  (centerbox
+    :orientation "h"
+    :class "main"
+    (left)
+    (center)
+    (right)
+  )
+)
+
+(defwindow notifications
+  :monitor 0
+  :geometry (geometry  
+    :x -9
+    :y 9
+    :width 300
+    :anchor "top right")
+  :stacking "fg"
+  :windowtype "dock"
+  :wm-ignore true
+  (notificationsW)
+)
+
+(defwindow desktopIcons
+  :monitor 0
+  :geometry (geometry  
+    :x 0
+    :y 0
+    :anchor "top left")
+  :stacking "bg"
+  :windowtype "dialog"
+  (desktopIconsW)
+)
+
+(defwindow controlPanel
+  :monitor 0
+  :geometry (geometry  
+    :x -9
+    :y -56
+    :anchor "bottom right")
+  :stacking "fg"
+  :windowtype "dock"
+  :wm-ignore true
+  (controlPanelW)
+)

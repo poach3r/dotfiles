@@ -1,0 +1,1 @@
+return {recents={}, window={[1]=941,[2]=1006,[3]=970,[4]=138,["n"]=4}, window_mode="normal", previous_find={[1]="contain",[2]="bg0",[3]="children",[4]="container",[5]="app",[6]="'r'",[7]="'d'",[8]="launcher",[9]="launch",[10]="modkey }, \"space",[11]="layout",[12]="rofi",[13]="\"d\""}, previous_replace={}}

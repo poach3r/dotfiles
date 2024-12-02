@@ -1,0 +1,15 @@
+(defwidget power []
+    (box
+      :space-evenly false
+      :halign "end"
+      :orientation "h"
+      (button
+        :class "guy"
+        :onclick "shutdown now" "⏻"
+      )
+      (button
+        :class "guy"
+        :onclick "bspc quit" ""
+      )
+    )
+  )

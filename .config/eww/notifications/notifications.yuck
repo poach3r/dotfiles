@@ -1,0 +1,38 @@
+(defwidget notificationsW []
+    (eventbox
+      :onclick 'eww close notifications -c ./'
+      (box
+        :class "container"
+        :orientation "h"
+        :space-evenly false
+        (image
+          :visible { tiramisu.icon == "" ? false : true }
+          :path "${tiramisu.icon}"
+          :image-height 86
+          :style "margin: 6px; border-radius: 64px;"
+          :valign "start"
+          :halign "start"
+        )
+        (box
+          :space-evenly false
+          :orientation "v"
+          :halign "start"
+          (label
+            :text "${tiramisu.summary}"
+            :halign "start"
+            :class "textNoBg"
+            :style "margin: 3px 3px;"
+          )
+          (label
+            :text "${tiramisu.body}"
+            :halign "start"
+            :justify "left"
+            :class "textNoBg"
+            :unindent true
+            :wrap true
+            :style "font-weight: 500;"
+          )
+        )
+      )
+    )
+  )

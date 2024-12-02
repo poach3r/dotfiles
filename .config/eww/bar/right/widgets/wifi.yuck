@@ -1,0 +1,22 @@
+(defvar bluetoothPressed false)
+
+(defwidget wifi []
+    (box
+      :class { wifiName != "" ? "on" : "off" }
+      :halign "center"
+      (label
+        :halign "center"
+        :text "󰖩"
+        :width 72
+        :class "text"
+        :style { wifiName != "" ? "color: #191724; font-size: 24;" : "color: #FFFFFF; font-size: 24;" }
+      )
+    )
+)
+
+(defwidget wifiIcon []
+  (label
+    :class "icon"
+    :text "${ wifiName != "" ? "󰤨" : "󰤭"}"
+  )
+)

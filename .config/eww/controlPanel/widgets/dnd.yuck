@@ -1,0 +1,26 @@
+(defvar dndPressed false)
+
+(defwidget dnd []
+  (box
+    :halign "center"
+    (overlay
+      ;(label
+      ;  :halign "center"
+      ;  :text "󰽥"
+      ;  :width 72
+      ;  :class "text"
+      ;  :style { dndPressed ? "color: #191724; font-size: 24;" : "color: #FFFFFF; font-size: 24;" }
+      ;)
+      (image
+        :path "./images/do_not_disturb.svg"
+        :image-width 24
+        :image-height 24
+        :fill-svg "#FFFFFF"
+        :class { dndPressed ? "on" : "off" }
+      )
+      (button
+        :onclick { dndPressed ? "eww update dndPressed=false -c ./" : "eww update dndPressed=true -c ./" }
+      )
+    )
+  )
+)

@@ -1,0 +1,39 @@
+(defwidget volumeScale []
+  (box
+    :space-evenly false
+    :class "test"
+    (image
+      :halign "start"
+      :path "${ headphonesVolume > 0 ? "./images/volume_up.svg" : "./images/volume_off.svg" }"
+      :image-width 20
+      :image-height 20
+      :fill-svg "#FFFFFF"
+      :style "margin: 0px 6px 0px 0px;"
+    )
+    (scale
+      :width 180
+      :value headphonesVolume
+      :onchange "pamixer --set-volume {}"
+    )
+  )
+)
+
+(defwidget micVolumeScale []
+  (box
+    :space-evenly false
+    :class "test"
+    (image
+      :halign "start"
+      :path "${ micVolume > 0 ? "./images/mic_on.svg" : "./images/mic_off.svg" }"
+      :image-width 20
+      :image-height 20
+      :fill-svg "#FFFFFF"
+      :style "margin: 1px 6px 1px 0px;"
+    )
+    (scale
+      :width 180
+      :value micVolume
+      :onchange "pamixer --default-source --set-volume {}"
+    )
+  )
+)

@@ -1,0 +1,9 @@
+(defwidget bluetooth []
+  (image
+    :path "./images/bluetooth.svg"
+    :image-width 24
+    :image-height 24
+    :fill-svg "#FFFFFF"
+    :class "on"
+  )
+)

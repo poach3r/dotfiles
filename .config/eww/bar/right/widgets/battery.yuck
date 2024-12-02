@@ -1,0 +1,32 @@
+(defvar batClicked false)
+
+(defwidget battery []
+  (box
+  (button
+    ;:class "icon"
+    :visible { batClicked ? false : true }
+    :onclick "eww update batClicked=true"
+    (image
+      :path "${ EWW_BATTERY.BAT1.capacity >= 87.5 ? "./images/battery_full.svg" : 
+      "${ EWW_BATTERY.BAT1.capacity >= 75 ? "./images/battery_6.svg" : 
+      "${ EWW_BATTERY.BAT1.capacity >= 62.5 ? "./images/battery_5.svg" : 
+      "${ EWW_BATTERY.BAT1.capacity >= 50 ? "./images/battery_4.svg" :
+      "${ EWW_BATTERY.BAT1.capacity >= 37.5 ? "./images/battery_3.svg" :
+      "${ EWW_BATTERY.BAT1.capacity >= 25 ? "./images/battery_2.svg" :
+      "${ EWW_BATTERY.BAT1.capacity >= 12.5 ? "./images/battery_1.svg" : 
+      "${ EWW_BATTERY.BAT1.capacity >= 0 ? "./images/battery_0.svg" :
+      "./images/battery_charging.svg" }"  }" }"  }" }" }" }" }"
+      :image-width 24
+      :image-height 24
+      :fill-svg "#FFFFFF"
+    )
+  )
+  (button
+    :class "textNoBg"
+    ;:style "margin: 0px 4px 0px 0px;"
+    :visible batClicked
+    :onclick "eww update batClicked=false"
+    "${EWW_BATTERY.BAT1.capacity}%" 
+  )
+  )
+)

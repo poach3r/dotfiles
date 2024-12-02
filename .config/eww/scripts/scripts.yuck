@@ -1,0 +1,39 @@
+(defpoll brightness
+  :interval "5s" 
+  "brightnessctl g"
+)
+
+(defpoll headphonesVolume 
+  :interval "5s"
+  "pamixer --get-volume"
+)
+
+(defpoll micVolume 
+  :interval "5s"
+  "pamixer --default-source --get-volume"
+)
+
+(defpoll wifiName 
+  :interval "5m" 
+  :run-while controlPanelVisible
+  "nmcli -t -f active,ssid dev wifi | egrep '^yes' | cut -d':' -f2"
+)
+
+(deflisten appsjson
+  "./scripts/apps.sh"
+)
+
+;(defpoll appsjson
+;  :interval "0.5s"
+;  "nu ./scripts/apps.nu"
+;)
+
+(defpoll capsLockStatus
+  :run-while controlPanelVisible
+  :interval "1s"
+  './scripts/caps.sh'
+)
+
+;(deflisten tiramisu :initial 'nothing' './scripts/notifications.sh' )
+
+(defvar tiramisu 'nothing')

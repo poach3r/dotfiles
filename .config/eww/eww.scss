@@ -1,0 +1,144 @@
+$base00: #161616;
+$base01: #262626;
+$base02: #393939;
+$base03: #bcc0cc;
+$base04: #908caa;
+$base05: #f2f4f8;
+$base06: #e0def4;
+$base07: #524f67;
+$base08: #eb6f92;
+$base09: #78a9ff;
+$base0A: #ee5396;
+$base0B: #9ccfd8;
+$base0C: #c4a7e7;
+$base0D: #1e66f5;
+$base0E: #be95ff;
+$base0F: #524f67;
+
+* {
+  all: unset;
+  background-color: transparent;
+}
+
+.main {
+  background-color: $base00;
+  margin: 0px;
+  border-radius: 0px;
+  padding: 5px 3px
+}
+
+.icon {
+  margin: 3px;
+  border-radius: 6px;
+  color: $base05;
+  padding: 2px 5px;
+  background-color: $base01;
+}
+
+.text {
+  margin: 3px;
+  font-size: 20px;
+  color: $base05;
+  font-weight: 700;
+
+  padding: 0px 5px;
+  font-family: "Noto Sans";
+  background-color: $base01;
+  border-radius: 6px;
+}
+
+.textNoBg {
+  font-size: 20px;
+  color: $base05;
+  font-weight: 700;
+  font-family: "Noto Sans";
+}
+
+slider {
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 16px;
+}
+
+trough {
+  background-color: $base00;
+  padding: 0px;
+  border-radius: 20px;
+  margin: 3px;
+}
+
+highlight {
+  border-radius: 20px;
+  background-color: $base05;
+  padding: 6px;
+  margin: 0px;
+}
+
+.container {
+  background-color: $base01;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.desktopIconText {
+  background-color: $base00;
+  font-size: 16px;
+  color: $base05;
+  font-weight: 500;
+  padding: 2px;
+  font-family: "Noto Sans";
+  border-radius: 12px;
+  margin: 2px;
+}
+
+.desktopIcon {
+  background-color: $base00;
+  border-radius: 12px;
+  margin: 4px;
+  padding: 4px;
+}
+
+.workspaceThing {
+  background-color: $base01;
+  padding: 0px 10px;
+  margin: 0px;
+  color: $base05;
+  font-size: 20px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.workspaceBox {
+  background-color: $base01; 
+  border-radius: 4px; 
+  margin: 0px 4px;
+}
+
+.on {
+  margin: 4px;
+  padding: 16px 37px;
+  border-radius: 12px;
+  color: $base05;
+  background-color: $base0E;
+}
+
+.off {
+  margin: 4px;
+  padding: 16px 37px;
+  border-radius: 12px;
+  color: $base05;
+  background-color: $base02;
+}
+
+.app {
+  padding: 0px;
+  margin: 3px;
+  border-radius: 8px;
+}
+
+.test {
+  padding: 0px;
+  margin: 4px;
+  background-color: transparent;
+  border-radius: 20px;
+}

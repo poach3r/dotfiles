@@ -1,8 +1,5 @@
-/* ROUNDED THEME FOR ROFI */
-/* Author: Newman Sanchez (https://github.com/newmanls) */
-
 * {
-    bg0:    #262626;
+    bg0:    #191919;
     bg1:    #262626;
     bg2:    #393939;
     bg3:    #ee5396;
@@ -27,23 +24,26 @@ window {
     width:          480;
     border-radius:  24px;
 
-    background-color:   @bg0;
+    background-color:   @bg1;
+    border-color: @bg0;
+    border: 3px;
 }
 
 mainbox {
-    padding:    12px;
+    padding:    0px;
 }
 
 inputbar {
-    background-color:   @bg2;
+    background-color:   @bg0;
     border-color:       @bg3;
 
     border:         0px;
-    border-radius:  16px;
+    border-radius:  0px;
 
-    padding:    8px 16px;
+    padding:    2px 200px;
+    align: "center";
     spacing:    8px;
-    children:   [ prompt, entry ];
+    children:   [ entry ];
 }
 
 prompt {
@@ -51,7 +51,8 @@ prompt {
 }
 
 entry {
-    placeholder:        "Search";
+    font:   "Noto Sans 10";
+    placeholder:        "";
     placeholder-color:  @fg2;
 }
 
@@ -69,7 +70,7 @@ textbox {
 listview {
     background-color:   transparent;
 
-    margin:     12px 0 0;
+    margin:     12px 12px;
     lines:      8;
     columns:    1;
 
@@ -77,8 +78,7 @@ listview {
 }
 
 element {
-    padding:        8px 16px;
-    spacing:        8px;
+    padding:        8px 8px;
     border-radius:  16px;
 }
 

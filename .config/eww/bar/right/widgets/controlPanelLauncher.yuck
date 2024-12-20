@@ -2,7 +2,7 @@
 
 (defwidget controlPanelLauncher[]  
   (button
-    :onclick { controlPanelVisible ? "eww close controlPanel -c ./; eww update controlPanelVisible=false -c ./" : "eww open controlPanel -c ./; eww update controlPanelVisible=true -c ./ &" }
+    :onclick { controlPanelVisible ? "eww update controlPanelVisible=false -c ./" : "eww update controlPanelVisible=true -c ./" }
     :class "icon"
     (image
       :path { controlPanelVisible ? "./images/close.svg" : "./images/menu.svg" }

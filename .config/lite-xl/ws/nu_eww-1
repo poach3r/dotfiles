@@ -1,0 +1,1 @@
+return { path = "/home/poacher/.config/nu_eww", documents = {["type"]="leaf",["active_view"]=1,["views"]={[1]={["type"]="doc",["filename"]="/home/poacher/.config/sway/config",["text"]=false,["selection"]={[1]=1,[2]=1,[3]=1,[4]=1},["active"]=true,["scroll"]={["x"]=0,["y"]=0}}}}, directories = {} }

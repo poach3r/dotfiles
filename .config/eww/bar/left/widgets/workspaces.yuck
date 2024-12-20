@@ -4,21 +4,13 @@
   (box
     :class "icon"
     :space-evenly false
-    (workspaceNub :num 1)
-    (workspaceNub :num 2)
-    (workspaceNub :num 3)
-    (workspaceNub :num 4)
-  )
-)
+    (for x in {workspacejson}
+      (workspaceNub :workspace x))))
 
-(defwidget workspaceNub [ num ]
-  (eventbox
-    :onclick "bspc desktop -f ${num}; eww update activeWorkspace=${num} -c ./"
+(defwidget workspaceNub [ workspace ]
+  (button
+    :onclick "swaymsg -t command workspace number ${workspace.name}"
     :cursor "pointer"
-    (label
-      :text num
-      :class "workspaceThing"
-      :style { activeWorkspace == num ? "color: #161616; background-color: #f2f4f8; border-radius: 8px;" : ""}
-    )
-  )
-)
+    :class "workspaceThing"
+    :style { workspace.focused ? "color: #161616; background-color: #f2f4f8; border-radius: 8px;" : ""}
+    {workspace.name}))

@@ -1,4 +1,7 @@
 [
   "table-editor-obsidian",
-  "better-word-count"
+  "better-word-count",
+  "editing-toolbar",
+  "omnisearch",
+  "recent-files-obsidian"
 ]

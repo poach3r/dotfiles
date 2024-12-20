@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+./scripts/ewwinfo Notifs '{"icon": "", "summary": "Eww Started", "body": "Eww has been started successfully.", "source": ""}' &
+
+tiramisu -s -o '{"icon": "#icon", "summary": "#summary", "body": "#body", "source": "#source"}' | {
+  while read -r event; do
+    ./scripts/ewwinfo Notifs "$event" &
+  done
+}

@@ -4,7 +4,7 @@
 local style = require "core.style"
 local common = require "core.common"
 
-local base00 = { common.color "#161616" }
+local base00 = { common.color "#191919" }
 local base01 = { common.color "#262626" }
 local base02 = { common.color "#393939" }
 local base03 = { common.color "#525252" }

@@ -1,19 +1,19 @@
 $base00: #161616;
 $base01: #262626;
 $base02: #393939;
-$base03: #bcc0cc;
-$base04: #908caa;
+$base03: #525252;
+$base04: #dde1e6;
 $base05: #f2f4f8;
-$base06: #e0def4;
-$base07: #524f67;
-$base08: #eb6f92;
+$base06: #ffffff;
+$base07: #08bdba;
+$base08: #3ddbd9;
 $base09: #78a9ff;
 $base0A: #ee5396;
-$base0B: #9ccfd8;
-$base0C: #c4a7e7;
-$base0D: #1e66f5;
+$base0B: #33b1ff;
+$base0C: #ff7eb6;
+$base0D: #42be65;
 $base0E: #be95ff;
-$base0F: #524f67;
+$base0F: #82cfff;
 
 * {
   all: unset;
@@ -37,7 +37,7 @@ $base0F: #524f67;
 
 .text {
   margin: 3px;
-  font-size: 20px;
+  font-size: 20;
   color: $base05;
   font-weight: 700;
 
@@ -48,7 +48,7 @@ $base0F: #524f67;
 }
 
 .textNoBg {
-  font-size: 20px;
+  font-size: 20;
   color: $base05;
   font-weight: 700;
   font-family: "Noto Sans";
@@ -74,28 +74,20 @@ highlight {
   margin: 0px;
 }
 
-.container {
+.container, .notif {
   background-color: $base01;
   padding: 4px;
   border-radius: 8px;
+  border: 3px solid $base00;
 }
 
-.desktopIconText {
-  background-color: $base00;
-  font-size: 16px;
-  color: $base05;
-  font-weight: 500;
-  padding: 2px;
-  font-family: "Noto Sans";
-  border-radius: 12px;
-  margin: 2px;
+.notif {
+  margin: 0px 0px 6px 0px;
+  transition: 150ms ease-in-out;
 }
 
-.desktopIcon {
-  background-color: $base00;
-  border-radius: 12px;
-  margin: 4px;
-  padding: 4px;
+.notif:hover {
+  background-color: $base05;
 }
 
 .workspaceThing {
@@ -103,9 +95,10 @@ highlight {
   padding: 0px 10px;
   margin: 0px;
   color: $base05;
-  font-size: 20px;
+  font-size: 20;
   font-weight: 700;
   border-radius: 8px;
+  transition: 100ms ease-in-out;
 }
 
 .workspaceBox {
@@ -119,7 +112,7 @@ highlight {
   padding: 16px 37px;
   border-radius: 12px;
   color: $base05;
-  background-color: $base0E;
+  background-color: $base07;
 }
 
 .off {
@@ -132,8 +125,13 @@ highlight {
 
 .app {
   padding: 0px;
-  margin: 3px;
+  margin: 0px 3px;
   border-radius: 8px;
+}
+
+.app:hover {
+  background-color: #ffffff;
+  transition: 150ms ease-in-out;
 }
 
 .test {
@@ -141,4 +139,26 @@ highlight {
   margin: 4px;
   background-color: transparent;
   border-radius: 20px;
+}
+
+.dot {
+  padding: 3px 3px;
+  background-color: $base07;
+  color: $base08;
+  margin: 2px 2px -2px 2px;
+  border-radius: 20px;
+}
+
+.notifHeaderText {
+  font-family: "Noto Sans";
+  margin: 3px 6px; 
+  font-weight: 500; 
+  font-size: 12;
+}
+
+.notifHeader {
+  background-color: #161616;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  margin: -6px -6px 4px -6px; 
 }

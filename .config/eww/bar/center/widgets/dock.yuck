@@ -2,11 +2,27 @@
   (box
     :space-evenly false
     (for app in appsjson
-      (image
+      (box
+        :orientation "v"
+        :space-evenly false
+        (button
         :class "app"
-        :path "${app}"
-        :image-height 34
-        :image-width 34
+        :onclick "alacritty &"
+        (image
+          :path "${app.name}"
+          :image-height 31
+          :image-width 31
+        )
+        )
+        (box
+          :space-evenly false
+          :valign "center"
+          :halign "center"
+          :orientation "h"
+          (for i in {app.amt}
+            (box :class "dot")
+          )
+        )
       )
     )
   )

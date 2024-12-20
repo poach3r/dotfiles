@@ -6,33 +6,126 @@
 (include "./controlPanel/widgets/volume.yuck")
 
 (defwidget controlPanelW []
+  (revealer
+    :reveal controlPanelVisible
+    :transition "slideup"
     (box
-      :class "container"
+      :hexpand false
       :orientation "v"
       :space-evenly false
-      :style "padding: 6px; border-radius: 16px;"
+      (controls)
+      (notifHistory))))
+
+(defwidget controls []
+  (box
+    (box :hexpand true :halign "start")
+    (box
+      :class "notif"
+      :orientation "v"
+      :space-evenly false
+      :halign "end"
       (box
-        :halign "center"
-        :space-evenly false
         :orientation "h"
-        (box 
-          :space-evenly false
-          :orientation "v"
-          (wifi)  
-          (dnd)
-        )
+        :space-evenly false
+        :class "notifHeader"
         (box
+          :hexpand true
+          :halign "center"
+          (label
+            :text "Control Panel"
+            :class "notifHeaderText"
+            :justify "center"
+            :valign "center")))
+        (box
+          :halign "center"
           :space-evenly false
-          :orientation "v"
-          (bluetooth)
-          (capsLock)
-        )
-      )
-      (box
-        :style "margin: 4px 0px;"
-      )
+          :orientation "h"
+          (box 
+            :space-evenly false
+            :orientation "v"
+            (wifi)  
+            (dnd))
+          (box
+            :space-evenly false
+            :orientation "v"
+            (bluetooth)
+            (capsLock)))
+      (box :style "margin: 4px 0px;")
       (brightness)
       (volumeScale)
-      (micVolumeScale)
-    ) 
-  )
+      (micVolumeScale))))
+
+(defwidget notifHistory[]
+  ;(revealer
+    ;:reveal { notifs[1] != '[]' }
+    ;:transition "slideup"
+      (box
+    (box :hexpand true :halign "start")
+    (box
+      :orientation "v"
+      :space-evenly false
+      :class "notif"
+      :valign "fill"
+      (centerbox
+        :orientation "h"
+        :space-evenly false
+        :class "notifHeader"
+        (box)
+        (box
+          :halign "center"
+          (label
+            :text "Notification History"
+            :class "notifHeaderText"
+            :justify "center"
+            :valign "center"))
+        (box
+          :halign "end"
+          :hexpand false
+          :style "margin: 0px 6px 0px 0px;"
+          (button
+            :onclick './scripts/ewwinfo ClearNotifs; eww update notifs="[[], []]"'
+            (image
+              :fill-svg "#FFFFFF"
+              :path "./images/close.svg"
+              :image-with 14
+              :image-height 14))))
+      (scroll
+        :height 300
+        :width 300
+        (box 
+          :space-evenly false 
+          :orientation "v"
+          (for x in { notifs[1] }
+            (controlPanelNotification :notif x)))))));)
+
+(defwidget controlPanelNotification [ notif ]
+  (box
+    :orientation "v"
+    :space-evenly false
+    :class "notif"
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "notifHeader"
+      (box
+        :hexpand true
+        :halign "center"
+        (label
+          :limit-width 30
+          :text "${notif.summary}"
+          :class "notifHeaderText"
+          :justify "center"
+          :valign "center")))
+    (box
+      :orientation "v"
+      :space-evenly false
+      :style "padding: 0px 6px;"
+      :hexpand false
+      (label
+        :text "${notif.body}"
+        :halign "start";
+        :justify "left"
+        :class "textNoBg"
+        :wrap true
+        :style "font-weight: 500; font-size: 18; font-family: Noto Sans"
+        :valign "center"))))

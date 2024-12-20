@@ -1,13 +1,26 @@
-(include "./desktopIcons/genericIcon.yuck")
-
 (defwidget desktopIconsW []
   (box
     :orientation "v"
     :space-evenly false
-    :style "margin: 4px;"
-    (genericIcon :onclick "firefox" :name "firefox" :altName "Firefox")
-    (genericIcon :onclick "idea-ultimate" :name "intellij-idea" :altName "Idea")
-    (genericIcon :onclick "alacritty" :name "terminal" :altName "Alacritty")
-    (genericIcon :onclick "nemo" :name "system-file-manager" :altName "Nemo")
-  )
-)
+    (genericIcon :onclick "floorp" :iconName "firefox-nightly" :name "Floorp")
+    (genericIcon :onclick "alacritty" :iconName "Terminal" :name "Alacritty")
+    (genericIcon :onclick "nemo" :iconName "nemo" :name "Nemo")
+    (genericIcon :onclick "obsidian" :iconName "obsidian" :name "Obsidian")
+    (genericIcon :onclick "intellij-idea-ultimate-edition" :iconName "intellij-idea-ultimate-edition" :name "Idea")))
+
+(defwidget genericIcon [ onclick iconName name ]
+  (button
+    :onclick "${onclick} &"
+    :class "notif"
+    (box
+      :orientation "v"
+      :space-evenly false
+      (box
+        :class "notifHeader"
+        (label
+          :text "${name}"
+          :class "notifHeaderText"))
+      (image
+        :image-width 48
+        :image-height 48
+        :path "/usr/share/icons/Papirus-Dark/48x48/apps/${iconName}.svg"))))

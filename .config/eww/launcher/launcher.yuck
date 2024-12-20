@@ -1,0 +1,6 @@
+(defwidget launcherW []
+  (input
+    :value "test"
+    :onaccept "{} &"
+  )
+)

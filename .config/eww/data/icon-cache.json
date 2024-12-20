@@ -1,0 +1,12 @@
+{
+  "" : "/usr/share/icons/Papirus/32x32/apps/x.svg",
+  "Alacritty" : "/usr/share/icons/Papirus/32x32/apps/Terminal.svg",
+  "foot" : "/usr/share/icons/Papirus/32x32/apps/foot.svg",
+  "nemo" : "/usr/share/icons/Papirus/32x32/apps/nemo.svg",
+  "jetbrains-idea" : "/usr/share/icons/Papirus/32x32/apps/intellij-idea-ultimate-edition.svg",
+  "floorp" : "/usr/share/icons/Papirus/32x32/apps/firefox-nightly.svg",
+  "viewnior" : "/usr/share/icons/Papirus/32x32/apps/viewnior.svg",
+  "EvalBlockWithInput { span: Span { start: 91324, end: 91331 }, sources: [CantFindColumn { col_name: \"app_id\", span: Some(Span { start: 91439, end: 91445 }), src_span: Span { start: 91324, end: 91331 } }] }" : "/usr/share/icons/Papirus/32x32/apps/lutris_counter-strike-condition-zero-deleted-scenes.svg",
+  "lite-xl" : "/usr/share/icons/Papirus/32x32/apps/lite.svg",
+  "obsidian" : "/usr/share/icons/Papirus/32x32/apps/obsidian.svg"
+}

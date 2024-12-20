@@ -3,7 +3,7 @@
   "alwaysUpdateLinks": true,
   "showInlineTitle": false,
   "defaultViewMode": "source",
-  "promptDelete": false,
+  "promptDelete": true,
   "rightToLeft": false,
-  "showRibbon": true
+  "showRibbon": false
 }

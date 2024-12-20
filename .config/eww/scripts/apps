@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#bspc subscribe report | { 
+#  while read -r event; do
+#    echo $(./scripts/ewwinfo GetApps)
+#  done
+#}
+
+swaymsg -t subscribe '["window"]' --monitor | {
+  while read -r event; do
+    echo $(./scripts/ewwinfo GetApps)
+  done
+}

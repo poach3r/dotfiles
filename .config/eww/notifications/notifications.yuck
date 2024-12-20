@@ -1,38 +1,43 @@
+;; TODO - add image support
+
 (defwidget notificationsW []
-    (eventbox
-      :onclick 'eww close notifications -c ./'
-      (box
-        :class "container"
+  (revealer
+    :height 0
+    :reveal { notifs[0] != '[]' && dndPressed == false}
+    :transition "slidedown"
+  (box
+    :style "margin: 8px;"
+    :orientation "v"
+    :space-evenly false
+    (for x in { notifs[0] }
+      (centerbox
         :orientation "h"
         :space-evenly false
-        (image
-          :visible { tiramisu.icon == "" ? false : true }
-          :path "${tiramisu.icon}"
-          :image-height 86
-          :style "margin: 6px; border-radius: 64px;"
-          :valign "start"
-          :halign "start"
-        )
-        (box
-          :space-evenly false
-          :orientation "v"
-          :halign "start"
-          (label
-            :text "${tiramisu.summary}"
-            :halign "start"
-            :class "textNoBg"
-            :style "margin: 3px 3px;"
-          )
-          (label
-            :text "${tiramisu.body}"
-            :halign "start"
-            :justify "left"
-            :class "textNoBg"
-            :unindent true
-            :wrap true
-            :style "font-weight: 500;"
-          )
-        )
-      )
-    )
-  )
+        (box :hexpand true :halign "start")
+        (box :hexpand true :halign "center")
+        (notification :notif x))))))
+
+(defwidget notification [ notif ]
+  (box
+    :orientation "v"
+    :space-evenly false
+    :class "notif"
+    :halign "end"
+    (box
+      :orientation "h"
+      :space-evenly false
+      :class "notifHeader"
+      (box
+        :halign "center"
+        :hexpand true
+        (label
+          :text "${notif.summary}"
+          :class "notifHeaderText"
+          :justify "center")))
+    (box
+      (label
+        :text "${notif.body}"
+        :justify "left"
+        :class "textNoBg"
+        :wrap true
+        :style "font-weight: 500; font-size: 18; font-family: Noto Sans"))))

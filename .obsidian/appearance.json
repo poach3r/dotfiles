@@ -2,7 +2,7 @@
   "cssTheme": "Oxocarbon",
   "theme": "obsidian",
   "textFontFamily": "Arial",
-  "showViewHeader": true,
-  "nativeMenus": true,
+  "showViewHeader": false,
+  "nativeMenus": false,
   "enabledCssSnippets": []
 }

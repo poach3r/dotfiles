@@ -1,0 +1,2 @@
+original_names = ["dev.zed.Zed", "zen"]
+replacement_names = ["zed", "zen-browser"]

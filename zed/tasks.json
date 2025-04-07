@@ -1,0 +1,13 @@
+[
+  {
+    "label": "sbt run",
+    "name": "sbt-run",
+    "command": "sbt run",
+    "working_directory": "${workspace_root}",
+    "environment": {
+      "PATH": "${env.PATH}"
+    },
+    "tags": ["scala-main"],
+    "shell": "system"
+  }
+]

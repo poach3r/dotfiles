@@ -1,0 +1,157 @@
+/*
+ * This theme depends on the base css. You need to have the config key `use_base_css` set to `true`.
+*/
+
+:root {
+    /* backgrounds */
+    --background: 0, 0%, 10%;
+    --background-soft: 15, 3%, 15%;
+    --border: 0, 0%, 15%;
+    --border-soft: 42, 73%, 84%;
+    --text: 220, 30%, 96%;
+    --text-active: 0, 0%, 100%;
+
+    --tag-background: 39, 28%, 68%;
+
+    /* foreground */
+    --foreground: 0, 0%, 15%;
+    --foreground-soft: 213, 15%, 88%;
+
+    /* accent colors */
+    --error: -26, 82%, 63%;
+    --success: 137, 49%, 50%;
+    --warning: 218, 100%, 74%;
+}
+
+* {
+    border: 0;
+}
+
+window {
+    border: 4px solid hsl(var(--border));
+    border-radius: 18px;
+}
+
+#search-bar {
+    background: hsl(var(--background-soft));
+    color: hsl(var(--text));
+    font-size: 15px;
+    margin-top: 8px;
+    border-radius: 10px;
+}
+
+.status-bar {
+    background: hsla(var(--foreground), 0.2);
+    padding: 4px 10px 4px 20px;
+}
+
+/* Will make icons inside active tile black else white */
+#search-icon-holder image,
+image.reactive {
+    -gtk-icon-filter: brightness(10) saturate(100%) contrast(100%); /* white */
+}
+.tile:selected image.reactive {
+    -gtk-icon-filter: brightness(0) saturate(100%) contrast(100%); /* black */
+}
+
+.tile:selected #title {
+    color: hsla(var(--text-active), 0.7);
+}
+
+.tile:selected .tag,
+.tag {
+    font-size: 11px;
+    border-radius: 3px;
+    padding: 2px 8px;
+    color: hsl(var(--tag-color));
+    box-shadow: 0px 0px 10px 0px hsla(var(--background), 0.2);
+    border: 1px solid hsla(var(--text-active), 0.2);
+    margin-left: 7px;
+}
+
+.tile:selected .tag-start,
+.tag-start {
+    background: hsla(var(--tag-background), 0.7);
+}
+
+.tile:selected .tag-end,
+.tag-end {
+    background: hsla(var(--success), 1);
+}
+
+.tile:focus {
+    outline: none;
+}
+
+#launcher-type {
+    font-size: 10px;
+    color: hsla(var(--text), 0.4);
+    margin-left: 0px;
+}
+.tile:selected #launcher-type {
+    color: hsla(var(--text-active), 0.4);
+}
+
+/*SHORTCUT*/
+#shortcut-holder {
+    box-shadow: unset;
+}
+#shortcut-holder label {
+    color: hsla(var(--text-active), 0.5);
+}
+
+/* BULK TEXT TILE */
+.bulk-text {
+    padding-bottom: 10px;
+    min-height: 50px;
+}
+
+#bulk-text-title {
+    margin-left: 10px;
+    padding: 10px 0px;
+    font-size: 10px;
+    color: gray;
+}
+
+#bulk-text-content-title {
+    font-size: 17px;
+    font-weight: bold;
+    color: hsla(var(--text-active), 0.7);
+    min-height: 20px;
+}
+
+#bulk-text-content-body {
+    font-size: 14px;
+    color: hsla(var(--text-active), 0.7);
+    line-height: 1.4;
+    min-height: 20px;
+}
+
+/*EVENT TILE*/
+.tile.event-tile:selected #time-label,
+.tile.event-tile:selected #title-label {
+    color: hsla(var(--text-active), 0.6);
+}
+
+/* NEXT PAGE */
+.next_tile {
+    color: hsl(var(--text-active));
+    background: hsl(var(--background));
+}
+.next_tile #content-body {
+    background: hsl(var(--background));
+    padding: 10px;
+    color: hsl(var(--text));
+}
+.raw_text,
+.next_tile #content-body {
+    font-family: "Fira Code", monospace;
+    font-feature-settings: "kern" off;
+    font-kerning: None;
+}
+
+.tile.animate {
+    transform: translateY(20px);
+    opacity: 0;
+    animation: fadeInUp 0s ease-out forwards;
+}

@@ -1,0 +1,40 @@
+$surface-strongest: #161616;
+$surface-strong: #161616;
+$surface-moderate: #262626;
+$surface-weak: #393939;
+$surface-weakest: #393939;
+
+$white-strongest: rgb(255, 255, 255);
+$white-strong: rgba(255, 255, 255, 0.87);
+$white-moderate: rgba(255, 255, 255, 0.34);
+$white-weak: rgba(255, 255, 255, 0.14);
+$white-weakest: rgba(255, 255, 255, 0.06);
+
+$black-strongest: rgb(0, 0, 0);
+$black-strong: rgba(0, 0, 0, 0.87);
+$black-moderate: rgba(0, 0, 0, 0.42);
+$black-weak: rgba(0, 0, 0, 0.15);
+$black-weakest: rgba(0, 0, 0, 0.06);
+
+$red-normal: #ff7eb6;
+$red-light: #ff7eb6;
+$orange-normal: #ee5396;
+$orange-light: #ee5396;
+$yellow-normal: #33b1ff;
+$yellow-light: #33b1ff;
+$green-normal: #42be65;
+$green-light: #42be65;
+$cyan-normal: #3ddbd9;
+$cyan-light: #3ddbd9;
+$blue-normal: #08bdba;
+$blue-light: #08bdba;
+$purple-normal: #be95ff;
+$purple-light: #be95ff;
+$pink-normal: #ff7eb6;
+$pink-light: #ff7eb6;
+
+$accent-primary: #f2f4f8;
+$accent-secondary: #dde1e6;
+
+// TODO: is there a better way to do this? this is for example used in gnome-calculator for the result top-border
+@define-color borders #{"" +$surface-strong};

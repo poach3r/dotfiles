@@ -1,0 +1,13 @@
+@use '../colors';
+
+progressbar {
+
+  trough {
+    background: colors.$white-weakest;
+    progress {
+      background: colors.$accent-secondary;
+      &.horizontal progress { background-image: linear-gradient(to right, colors.$accent-primary, colors.$accent-secondary); }
+      &.vertical progress { background-image: linear-gradient(to bottom, colors.$accent-primary, colors.$accent-secondary); }
+    }
+  }
+}

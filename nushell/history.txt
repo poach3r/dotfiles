@@ -1,0 +1,374 @@
+ls ~/Pictures/
+wayfire
+doas emerge gui-apps/wcm
+wayfire --help
+wayfire --debug
+wcm
+wget
+wget https://github.com/WayfireWM/wcm/releases/download/v0.9.0/wcm-0.9.0.tar.xz
+tar -xzvf ~/wcm-0.9.0.tar.xz
+mkdir ~/wcm
+mv ~/wcm-0.9.0.tar.xz ~/wcm
+cd ~/wcm
+tar -xvf ./wcm-0.9.0.tar.xz
+ls
+cd ./wcm-0.9.0/
+ls
+make
+cd ~/
+rm -rf ~/wcm/
+wget https://github.com/WayfireWM/wcm/
+wget https://github.com/WayfireWM/wcm.git
+ls
+rm ./index.html
+rm ./wcm.git
+git clone https://github.com/WayfireWM/wcm.git
+cd ./wcm/
+ls
+meson build
+doas emerge gui-apps/wf-shell
+emerge --depclean
+doas emerge --depclean
+emerge --update --newuse --deep --with-bdeps=y @world
+cat /sys/class/power_supply/BAT1
+cat /sys/class/power_supply/BAT1/capacity
+doas emerge --update --newuse --deep --with-bdeps=y @world
+doas nano /etc/portage/make.conf
+doas emerge --update --newuse --deep --with-bdeps=y @world
+doas emerge --depclean
+wayfire
+doas emerge gui-apps/wf-shell gui-apps/wcm
+wcm
+wayfire
+wcm
+cp ~/dotfiles/wayfire.ini ~/.config/
+wayfire
+nano ~/.config/wayfire.ini
+wf-background 
+nano ~/.config/wayfire.ini
+wayfire
+kanshi
+wayfire
+doas emerge wayfire-plugins-extra
+emerge -c wayfire-plugins-extra
+wcm
+doas emerge -c wayfire-plugins-extra
+nano ~/.config/wayfire.ini
+wcm
+git clone https://github.com/WayfireWM/wayfire-plugins-extra
+cd ~/wayfire-plugins-extra/
+meson build --prefix=/usr --buildtype=release
+doas emerge gui-libs/wf-config
+doas emerge dev-libs/boost
+doas emerge -g dev-libs/boost
+meson build --prefix=/usr --buildtype=release
+ninja -C build && doas ninja -C build install
+bash
+meson build --prefix=/usr --buildtype=release
+ninja -C build; doas ninja -C build install
+doas emerge -c boost
+doas emerge wayfire-plugins-extra
+reboot
+doas reboot
+nano ~/.config/wayfire.ini
+wf-plugins-extra
+rm -rf ~/wayfire-plugins-extra/
+wayfire --version
+exit
+wcm
+doas emerge wcm
+wcm
+reboot
+doas reboot
+doas emerge -g firefox
+doas emerge -g firefox-bin
+firefox
+wcm
+git clone https://github.com/WayfireWM/wayfire-plugins-extra
+cd ~/wayfire-plugins-extra/
+meson build --prefix=/usr --buildtype=release
+ninja -C build; doas ninja -C build install
+doas emerge -g boost
+ninja -C build; doas ninja -C build install
+meson build --prefix=/usr --buildtype=release
+ninja -C build; doas ninja -C build install
+doas emerge -c boost wayfire-plugins-extra
+doas emerge wayfire-plugins-extra-9999
+doas emerge wayfire-plugins-extra.9999
+doas emerge =wayfire-plugins-extra.9999
+doas emerge gui-libs/wayfire-plugins-extra.9999
+doas emerge gui-libs/wayfire-plugins-extra
+doas emerge gui-libs/wayfire-plugins-extra-0.10.0
+doas emerge gui-libs/wayfire-plugins-extra.0.10.0
+doas emerge gui-libs/wayfire-plugins-extra.0.10
+doas emerge wayfire-plugins-extra/wayfire-plugins-extra-9999
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge wayfire-plugins-extra/wayfire-plugins-extra
+doas emerge wayfire-plugins-extra
+wcm
+reboot
+doas reboot
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge wayfire
+doas nano /etc/portage/package.accept_keywords/misc
+wcm
+doas emerge wayfire wcm
+doas reboot
+wcm
+wf-panel 
+cp ~/dotfiles/wayfire.ini ~/.config/
+wcm
+cd ~/wayfire-plugins-extra/
+ninja -C build; doas ninja -C build install
+wayfire --version
+firefox
+git clone https://github.com/AhoyISki/Firedecor
+cd Firedecor/
+meson build
+doas emerge -g boost
+meson build
+meson compile -C build
+cd ../
+git clone https://github.com/soreau/pixdecor
+clear
+cd pixdecor/
+meson setup build --prefix=/usr
+ninja -C build
+doas ninja -C build install
+wayland-logout 
+wcm
+git clone https://github.com/poach3r/swirly
+doas emerge rustup
+firefox
+firefox-bin
+doas emerge dev-util/rustup
+clear
+doas nano /etc/portage/package.use/misc
+doas emerge dev-util/rust
+doas emerge dev-utils/rust
+doas emerge rust
+doas emerge dev-lang/rust
+doas nano /etc/portage/package.use/misc
+pamixer
+doas emerge dev-lang/rust-bin
+cargo
+cd ~/swirly/
+cargo build --release
+doas emerge gtk4-layer-shell
+doas emerge gtk-layer-shell
+cargo build --release
+doas emerge gui-libs/gtk4-layer-shell
+doas emerge gui-libs/gtk
+eselect repository
+eselect repository --help
+eselect --help
+eselect repository list
+doas emerge app-eselect/eselect-repository
+eselect repository list
+doas eselect repository list
+doas eselect repository add guru
+doas eselect repository add 
+doas eselect repository enable guru
+doas emerge gui-libs/gtk4-layer-shell
+doas emerge gtk4-layer-shell
+emaint sync -r guru
+doas emerge gtk4-layer-shell
+emaint -a sync
+doas emaint -a sync
+eselect news read
+clear
+doas <\n>emerge -avuDN @world
+doas emerge -avuDN @world
+doas nano /etc/portage/package.accept_keywords/misc
+wcm
+wf-background 
+nano ~/.config/wayfire.ini
+doas emerge gtk4-layer-shell
+doas emerge wayfire wcm wf-shell
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge gtk4-layer-shell
+cd ~/swirly/
+cargo build --release
+./target/release/swirly
+doas emerge lazygit
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge lazygit
+lazygit
+cd ~/
+mv ~/swirly/ ~/swirly-sway/
+git clone --single-branch --branch wayfire https://github.com/poach3r/swirly
+cd ./swirly/
+cargo build --release
+./target/release/swirly
+doas emerge noto papirus-icon-theme
+./target/release/swirly
+doas emerge noto grub-btrfs adwaita-icon-theme
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge noto grub-btrfs adwaita-icon-theme
+./target/release/swirly
+reboot
+doas reboot
+~/swirly/target/release/swirly
+git clone https://git.sr.ht/~ved/oxocarbon-gtk
+doas emerge npm
+doas emerge --getbinpkg net-libs/node-js
+doas emerge --getbinpkg net-libs/nodejs
+npm
+node
+doas nano /etc/portage/package.use/misc
+fastfetch
+doas emerge net-libs/nodejs
+nano ~/.config/wayfire.ini
+doas emerge net-libs/nodejs zed thunar wofi viewnior grim slurp wl-clipboard
+doas emerge net-libs/nodejs app-editors/zed thunar wofi viewnior grim slurp wl-clipboard
+emerge adwaita-icon-theme-legacy
+doas emerge adwaita-icon-theme-legacy
+~/swirly/target/release/swirly
+npm
+cd ~/oxocarbon-gtk/
+make
+doas make install
+gsettings
+nano ~/.config/gtk-3.0/settings.ini
+thunar
+zeditor
+wofi
+wofi --drun
+wofi --show
+wofi --show drun
+doas emerge thunar
+thunar
+doas emerge zed
+grim
+slurp
+viewnior
+doas emerge viewnior app-editors/zed
+zeditor
+wofi --show drun
+reboot
+doas reboot
+wofi --show drun
+zeditor
+zed
+viewnior
+doas emerge -c viewnior
+thunar
+doas emerge -c app-editors/zed
+doas emerge -c viewnior
+zedit 
+doas emerge -g app-editors/zed
+zedit
+doas cp ~/swirly/target/release/swirly /usr/bin/swirly-wf
+wofi --show drun
+view
+gsettings get org.gnome.desktop.interface gtk-theme
+nano ~/.config/gtk-3.0/settings.ini
+gsettings set org.gnome.desktop.interface gtk-theme phocus
+thunar
+gsettings get org.gnome.desktop.interface gtk-icon-theme phocus
+gsettings get org.gnome.desktop.interface gtk-icon-theme
+gsettings get org.gnome.desktop.interface icon-theme
+gsettings set org.gnome.desktop.interface icon-theme Papirus
+thunar
+swirly-wf
+doas emerge -c thunar
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+nano ~/.config/gtk-3.0/settings.ini
+doas emerge gnome-extra/nemo
+doas dispatch-conf
+nano ~/.config/gtk-3.0/settings.ini
+doas emerge gnome-extra/nemo
+nemo
+zedit ~/.config/wayfire.ini
+nemo
+wayland-logout 
+bash
+doas nano /etc/environment
+reboot
+doas reboot
+zedit ~/.config/wayfire.ini
+doas emerge swaync
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge swaync
+swaync
+doas dispatch-conf
+swaync
+doas emerge swaync
+notify-send
+notify-send "a" "b"
+swaync
+cp ~/dotfiles/swaync/ ~/.config/
+cp -r ~/dotfiles/swaync/ ~/.config/
+ls ~/dotfiles/
+clear
+kanshi
+fastfetch
+zedit ~/.config/starship.toml
+gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
+pkill swirly-wf
+swirly-wf
+reboot
+doas reboot
+doas emerge brightnessctl pamixer
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge brightnessctl pamixer
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge brightnessctl pamixer
+cd ~/oxocarbon-gtk/
+make
+doas make install
+nemo
+cd ~/swirly/
+pkill swirly-wf
+cargo run
+doas cp ~/swirly/target/release/swirly /usr/bin/swirly-wf
+brightnessctl 
+brightnessctl -50
+brightnessctl 50-
+brightnessctl set 50-
+doas passwd -l root
+doas usermod -a -G input poacher
+brightnessctl set 50-
+pamixer --help
+pamixer --set-volume 50
+doas pamixer --set-volume 50
+pipewire 
+id poacher
+pamixer
+pamixer --set-volume 50
+pamixer --set-volume 100%
+pamixer --set-volume 100
+pamixer --set-volume 0
+zedit ~/.config/wayfire.ini
+reboot
+doas reboot
+fastfetch
+clear
+fastfetch
+bash
+fastfetch
+clear
+fastfetch
+clear
+fastfetch
+gsettings get org.gnome.desktop.interface gtk-decoration-layout 
+gsettings get org.gnome.desktop.interface
+gsettings
+gsettings list-keys
+gsettings list-keys org.gnome.desktop.interface
+gsettings
+wayland-logout 
+notify-send "a" "b"
+doas emerge app-office/obsidian
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge app-office/obsidian
+doas nano /etc/portage/make.conf
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge --autounmask-write --autounmask app-office/obsidian
+doas dispatch-conf
+doas emerge --autounmask-write --autounmask app-office/obsidian
+doas emerge btrfs-grub
+doas emerge grub-btrfs
+doas nano /etc/portage/make.conf
+doas nano /etc/portage/package.accept_keywords/misc
+doas emerge grub-btrfs
